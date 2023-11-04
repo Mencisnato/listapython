@@ -417,4 +417,5 @@ for elemento in lista:
 
 # Exibir a contagem
 print(f"A contagem de elementos no intervalo [{a}, {b}] é: {contagem}")
+#Final da lista.
 
