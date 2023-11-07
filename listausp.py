@@ -150,3 +150,57 @@ for i in range(10):
     idade = int(input(f"Digite a idade da pessoa {i + 1}: "))
     
     if idade >= 18:
+#questão 8
+# Inicialize as variáveis para contar as pessoas em cada faixa etária
+faixa1 = faixa2 = faixa3 = faixa4 = faixa5 = 0
+
+# Solicita ao usuário que insira a idade de 15 pessoas
+for i in range(15):
+    idade = int(input(f"Digite a idade da {i + 1}ª pessoa: "))
+
+    if idade <= 15:
+        faixa1 += 1
+    elif 16 <= idade <= 30:
+        faixa2 += 1
+    elif 31 <= idade <= 45:
+        faixa3 += 1
+    elif 46 <= idade <= 60:
+        faixa4 += 1
+    else:
+        faixa5 += 1
+
+# Calcula a porcentagem de pessoas na primeira e última faixa etária em relação ao total
+total_pessoas = faixa1 + faixa2 + faixa3 + faixa4 + faixa5
+porcentagem_primeira_faixa = (faixa1 / total_pessoas) * 100
+porcentagem_ultima_faixa = (faixa5 / total_pessoas) * 100
+
+# Exibe os resultados
+print(f"Quantidade de pessoas na primeira faixa etária (até 15 anos): {faixa1}")
+print(f"Quantidade de pessoas na segunda faixa etária (16 a 30 anos): {faixa2}")
+print(f"Quantidade de pessoas na terceira faixa etária (31 a 45 anos): {faixa3}")
+print(f"Quantidade de pessoas na quarta faixa etária (46 a 60 anos): {faixa4}")
+print(f"Quantidade de pessoas na quinta faixa etária (acima de 61 anos): {faixa5}")
+print(f"Porcentagem de pessoas na primeira faixa etária em relação ao total: {porcentagem_primeira_faixa:.2f}%")
+print(f"Porcentagem de pessoas na última faixa etária em relação ao total: {porcentagem_ultima_faixa:.2f}%")
+#questão 09
+# Solicita ao usuário que insira um número para calcular a tabuada
+numero = int(input("Digite um número para calcular a tabuada: "))
+
+# Loop de 1 a 10 para calcular a tabuada
+for i in range(1, 11):
+    resultado = numero * i
+    print(f"{numero} x {i} = {resultado}")
+
+
+#questão 10
+# Loop externo para os números de 1 a 10
+for numero in range(1, 11):
+    print(f"Tabuada do {numero}:")
+    
+    # Loop interno para os múltiplos de 1 a 10
+    for multiplicador in range(1, 11):
+        resultado = numero * multiplicador
+        print(f"{numero} x {multiplicador} = {resultado}")
+    
+    # Espaço em branco entre as tabuadas
+    print()
